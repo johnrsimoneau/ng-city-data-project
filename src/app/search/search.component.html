@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control" placeholder="City name" #cityInput>
+      <span class="input-group-btn">
+        <button
+          (click)="storeCityName(cityInput.value)" 
+          class="btn btn-primary" type="button">Search</button>
+      </span>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <a *ngIf="getUsersLocation" (click)="getCurrentLocation()"> Use my current location</a>
+    <div *ngIf="hasErrorGettingGeoLocation" class="alert alert-danger">
+      An error occurred trying to get your location. Use the search input instead.
+    </div>
+  </div>
+</div>
