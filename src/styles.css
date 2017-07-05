@@ -1,2 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
+
+/****** Headers ******/
+.main-header { 
+    border-bottom: thin solid #eee;
+    margin-bottom: 20px;
+}
