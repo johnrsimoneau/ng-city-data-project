@@ -48,7 +48,7 @@ export class SearchComponent implements OnInit {
     localStorage.setItem('lat', lat);
     localStorage.setItem('long', long);
     localStorage.setItem('altitude', altitude);
-    this.router.navigate(['search-results']);
+    this.router.navigate(['search-results/wikipedia']);
   }
 
   private geoLocationError() {

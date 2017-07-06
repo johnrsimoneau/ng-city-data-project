@@ -17,7 +17,6 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: 'search-results', component: SearchResultsComponent,
     children: [
-      { path: '', redirectTo: 'wikipedia', pathMatch: 'full' },
       { path: 'wikipedia', component: WikipediaComponent}
     ]
   }
