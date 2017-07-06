@@ -3,6 +3,6 @@
 
 /****** Headers ******/
 .main-header { 
-    border-bottom: thin solid #eee;
+    font-weight: bold;
     margin-bottom: 20px;
 }

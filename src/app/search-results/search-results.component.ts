@@ -14,6 +14,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
   private state: string = '';
   private zip: string = '';
   private hasErrorGettingCityState: boolean = false;
+  private showSearchField: boolean = false;
 
   // Subscription
   private getCurrentLocationFromLatLongSubscription: any;
@@ -60,6 +61,10 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
     localStorage.setItem('state', this.state);
     localStorage.setItem('zip', this.zip);
 
+  }
+
+  toggleSearchField() {
+    this.showSearchField ? this.showSearchField = false : this.showSearchField = true;
   }
 
 }
