@@ -8,10 +8,13 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 
+// Services
+import { LocationService } from './shared/services/location/location.service';
+
 const routes: Routes = [
   { path: '', redirectTo: 'search', pathMatch: 'full'},
   { path: 'search', component: SearchComponent },
-  { path: 'search-results', component: SearchResultsComponent}
+  { path: 'search-results', component: SearchResultsComponent }
 ];
 
 @NgModule({
@@ -26,7 +29,9 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    LocationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
