@@ -10,18 +10,25 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 
 // Services
 import { LocationService } from './shared/services/location/location.service';
+import { WikipediaComponent } from './wikipedia/wikipedia.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'search', pathMatch: 'full'},
   { path: 'search', component: SearchComponent },
-  { path: 'search-results', component: SearchResultsComponent }
+  { path: 'search-results', component: SearchResultsComponent,
+    children: [
+      { path: '', redirectTo: 'wikipedia', pathMatch: 'full' },
+      { path: 'wikipedia', component: WikipediaComponent}
+    ]
+  }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    WikipediaComponent
   ],
   imports: [
     BrowserModule,
