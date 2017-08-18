@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { StoreModule } from '@ngrx/store';
+import { cityReducer } from './city.reducer';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -33,7 +35,8 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    StoreModule.provideStore({ city: cityReducer})
   ],
   providers: [
     LocationService
